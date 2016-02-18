@@ -31,15 +31,17 @@ class GameViewController: UIViewController {
         self.presentViewController(resultController, animated: true, completion: nil)
     }
     
-    @IBAction func paperButtonTapped(sender: UIButton) {
+    @IBAction func cuttingHandShape(sender: UIButton) {
+        sender.tag = 2
+        userPlay(sender)
+    }
+
+    @IBAction func papersButtonTapped(sender: UIButton) {
         sender.tag = 1
         userPlay(sender)
         performSegueWithIdentifier("fromPaper", sender: sender)
     }
-    @IBAction func scissorButtonTapped(sender: UIButton) {
-        sender.tag = 2
-        userPlay(sender)
-    }
+    
     // userPlay function
     func userPlay(sender: AnyObject) {
         let play = Play(rawValue: sender.tag)
@@ -51,6 +53,4 @@ class GameViewController: UIViewController {
         let resultController = segue.destinationViewController as! ResultViewController
         resultController.userPlay = self.play
     }
-    
-    
 }

@@ -28,17 +28,6 @@
                                     <action selector="rockButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdP-VN-aFK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW2-bH-pad" userLabel="scissor">
-                                <rect key="frame" x="510" y="265" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="tKK-Xf-dyW"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="scissors"/>
-                                <connections>
-                                    <action selector="scissorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I5c-Cj-Pib"/>
-                                    <segue destination="Fnv-HR-h05" kind="presentation" identifier="fromScissor" id="hc7-50-BdT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bc-1w-Q9O" userLabel="paper">
                                 <rect key="frame" x="265" y="121" width="70" height="70"/>
                                 <constraints>
@@ -47,7 +36,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="paper"/>
                                 <connections>
-                                    <action selector="paperButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8s-Um-ALT"/>
+                                    <action selector="papersButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I6h-dh-dO1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock Paper Scissors." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g2-IX-zy3">
@@ -60,6 +49,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW2-bH-pad" userLabel="scissor">
+                                <rect key="frame" x="510" y="265" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="tKK-Xf-dyW"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="scissors"/>
+                                <connections>
+                                    <action selector="cuttingHandShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5SF-nJ-N7R"/>
+                                    <segue destination="Fnv-HR-h05" kind="presentation" identifier="fromPaper" id="hc7-50-BdT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91368652809999995" blue="0.59775990609999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -86,7 +86,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <segue destination="Fnv-HR-h05" kind="presentation" identifier="fromPaper" id="di2-3e-2hL"/>
+                        <segue destination="Fnv-HR-h05" kind="presentation" identifier="fromPaper" id="7xa-LR-TZY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,16 +105,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-Ec-npy">
-                                <rect key="frame" x="190" y="467" width="221" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="221" id="GZr-Uq-BVz"/>
-                                    <constraint firstAttribute="height" constant="20.5" id="d7K-EE-6B1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kg-DY-6Fj">
                                 <rect key="frame" x="265" y="562" width="70" height="30"/>
                                 <state key="normal" title="Play again"/>
@@ -172,6 +162,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-Ec-npy">
+                                <rect key="frame" x="156" y="466" width="289" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="GZr-Uq-BVz"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="d7K-EE-6B1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91368652809999995" blue="0.59775990609999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -187,12 +187,12 @@
                             <constraint firstItem="zRB-qQ-v7x" firstAttribute="leading" secondItem="0gn-hP-d7k" secondAttribute="leadingMargin" constant="80" id="Cvq-C9-HIE"/>
                             <constraint firstItem="JtG-Ec-npy" firstAttribute="leading" secondItem="0gn-hP-d7k" secondAttribute="leadingMargin" constant="170" id="LQ9-85-USk"/>
                             <constraint firstItem="vfX-8R-Gx2" firstAttribute="top" secondItem="xHe-2l-JoT" secondAttribute="bottom" constant="27" id="OQd-qE-FPj"/>
-                            <constraint firstItem="JtG-Ec-npy" firstAttribute="top" secondItem="xIt-0S-AZF" secondAttribute="bottom" constant="41" id="Sic-6C-51i"/>
+                            <constraint firstItem="JtG-Ec-npy" firstAttribute="top" secondItem="xIt-0S-AZF" secondAttribute="bottom" constant="40" id="Sic-6C-51i"/>
                             <constraint firstItem="NcT-l3-BzQ" firstAttribute="leading" secondItem="0gn-hP-d7k" secondAttribute="leadingMargin" constant="80" id="Yft-TK-3J3"/>
                             <constraint firstItem="zRB-qQ-v7x" firstAttribute="width" secondItem="NcT-l3-BzQ" secondAttribute="width" constant="10" id="bi0-re-UMj"/>
                             <constraint firstItem="vfX-8R-Gx2" firstAttribute="leading" secondItem="NcT-l3-BzQ" secondAttribute="trailing" constant="53" id="dkV-ZZ-0US"/>
                             <constraint firstItem="xIt-0S-AZF" firstAttribute="centerX" secondItem="0gn-hP-d7k" secondAttribute="centerX" id="gx9-vE-OMS"/>
-                            <constraint firstItem="6Kg-DY-6Fj" firstAttribute="top" secondItem="JtG-Ec-npy" secondAttribute="bottom" constant="74" id="mDU-Lz-NaY"/>
+                            <constraint firstItem="6Kg-DY-6Fj" firstAttribute="top" secondItem="JtG-Ec-npy" secondAttribute="bottom" constant="75.5" id="mDU-Lz-NaY"/>
                             <constraint firstItem="xIt-0S-AZF" firstAttribute="top" secondItem="zRB-qQ-v7x" secondAttribute="bottom" constant="49" id="mbw-tW-HDm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6xx-s8-Iqb" secondAttribute="trailing" constant="4" id="mfe-Nb-mcE"/>
                             <constraint firstItem="6Kg-DY-6Fj" firstAttribute="centerX" secondItem="JtG-Ec-npy" secondAttribute="centerX" id="zR8-66-pDs"/>
@@ -221,6 +221,6 @@
         <image name="scissors" width="37" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hc7-50-BdT"/>
+        <segue reference="7xa-LR-TZY"/>
     </inferredMetricsTieBreakers>
 </document>
